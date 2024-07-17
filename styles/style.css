@@ -1,0 +1,215 @@
+/* font awesome fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* default rem size */
+html {
+  font-size: 10px;
+}
+/* variables */
+:root {
+  --primaryColor: #e6533c;
+  --floatingColor: rgba(48, 48, 48, 0.54);
+  --defFont: "Inter", sans-serif;
+  --fontColor: #fafaf9;
+}
+@font-face {
+  font-family: miama;
+  src: url(../fonts/miama/Miama.ttf);
+}
+/* default */
+.button {
+  font-size: 1.8rem;
+  padding: 1.6rem 4rem;
+  background-color: var(--primaryColor);
+  border-radius: 50px;
+  border: none;
+  color: var(--fontColor);
+  cursor: pointer;
+}
+.button-border {
+  font-size: 1.8rem;
+  padding: 1.6rem 4rem;
+  background-color: transparent;
+  border-radius: 50px;
+  border: 2px solid var(--fontColor);
+  color: var(--fontColor);
+  cursor: pointer;
+}
+body {
+  background-color: black;
+  color: var(--fontColor);
+  font-family: var(--defFont);
+}
+
+/* styles for header section */
+header {
+  max-width: 1440px;
+  padding: 50px 120px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, rgb(29, 29, 29), rgba(119, 119, 119, 0));
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.nav-icon {
+  display: none;
+}
+
+.logo h1 {
+  font-size: 3.5rem;
+  color: var(--primaryColor);
+}
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  font-size: 1.8rem;
+}
+
+.nav-menu ul li:nth-child(1) {
+  background-color: var(--primaryColor);
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+}
+
+/* hero section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.hero-details,
+.hero-img {
+  width: 50%;
+  /* border: 1px solid red; */
+}
+.hero-img {
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+.hero-details h1 {
+  font-size: 8rem;
+  line-height: 100%;
+}
+.hero-details span {
+  font-family: miama;
+  font-weight: 400;
+  font-size: 12rem;
+}
+.hero-details p {
+  font-size: 2rem;
+  margin: 25px 0;
+  color: rgba(255, 255, 255, 0.5);
+}
+.hero-details button {
+  margin-right: 10px;
+}
+
+.hero-img img {
+  display: block;
+  margin: 0 auto;
+  /* width: 100%; */
+}
+.hero-button {
+  display: flex;
+}
+
+.tutorial,
+.workout {
+  padding: 3rem 4rem;
+  border-radius: 16px;
+  background-color: var(--floatingColor);
+  border-radius: 15px;
+  position: absolute;
+  box-shadow: 0 0 rgba(17, 17, 17, 0.5);
+}
+.tutorial {
+  bottom: 50px;
+  left: -10px;
+}
+.tutorial > div {
+  display: flex;
+  justify-content: center;
+  align-items: centers;
+  font-size: 2rem;
+  gap: 1.7rem;
+}
+.play-icon {
+  background-color: var(--primaryColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.workout {
+  top: 100px;
+  right: 20px;
+}
+.tutorial h1,
+.workout h1 {
+  font-size: 2.4rem;
+  color: var(--fontColor);
+}
+.tutorial p,
+.workout {
+  color: rgba(239, 237, 232, 0.65);
+  font-size: 1.6rem;
+  margin-top: 5px;
+}
+.play-icon {
+  color: var(--fontColor);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+/* responsible for mobile */
+@media screen and (max-width: 576px) {
+  /* def rem size */
+  html {
+    font-size: 8px;
+  }
+  /* header section */
+  header {
+    padding: 50px 20px;
+  }
+  .nav-menu {
+    display: none;
+  }
+  .nav-icon {
+    display: block;
+    font-size: 3rem;
+  }
+  /* hero section */
+  .hero {
+    flex-direction: column;
+    gap: 5rem;
+  }
+  .hero-details {
+    width: calc(100% - 20px);
+  }
+  .hero-img {
+    width: calc(100% - 20px);
+  }
+  .tutorial {
+    padding: 2rem 2.5rem;
+    bottom: 100px;
+    left: 10px;
+  }
+  .workout {
+    padding: 2rem 2.5rem;
+    top: 60px;
+    right: 5px;
+  }
+}
