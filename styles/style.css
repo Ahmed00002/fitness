@@ -13,6 +13,7 @@ html {
 /* variables */
 :root {
   --primaryColor: #e6533c;
+  --paraColor: rgba(255, 255, 255, 0.5);
   --floatingColor: rgba(48, 48, 48, 0.54);
   --defFont: "Inter", sans-serif;
   --fontColor: #fafaf9;
@@ -47,9 +48,14 @@ body {
 }
 
 /* styles for header section */
+main {
+  max-width: 1440px;
+  padding: 0 100px;
+  margin: 0 auto;
+}
 header {
   max-width: 1440px;
-  padding: 50px 120px;
+  padding: 50px 100px 0 100px;
   margin: 0 auto;
   background: linear-gradient(180deg, rgb(29, 29, 29), rgba(119, 119, 119, 0));
 }
@@ -75,6 +81,9 @@ nav {
   justify-content: center;
   gap: 40px;
   font-size: 1.8rem;
+  padding: 5px 20px 5px 5px;
+  border: 1px solid var(--paraColor);
+  border-radius: 50px;
 }
 
 .nav-menu ul li:nth-child(1) {
@@ -83,6 +92,9 @@ nav {
   border-radius: 50px;
 }
 
+.nav-menu ul li:hover {
+  cursor: pointer;
+}
 /* hero section */
 .hero {
   display: flex;
@@ -112,7 +124,7 @@ nav {
 .hero-details p {
   font-size: 2rem;
   margin: 25px 0;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--paraColor);
 }
 .hero-details button {
   margin-right: 10px;
@@ -164,7 +176,7 @@ nav {
 }
 .tutorial p,
 .workout {
-  color: rgba(239, 237, 232, 0.65);
+  color: var(--paraColor);
   font-size: 1.6rem;
   margin-top: 5px;
 }
@@ -173,6 +185,63 @@ nav {
   height: 50px;
   width: 50px;
   border-radius: 50%;
+}
+
+/* habit section */
+.habits-container {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.habits-title {
+  max-width: 80%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.habits-title h1 {
+  font-size: 4.5rem;
+  margin-bottom: 12px;
+  color: var(--fontColor);
+}
+
+.habits-title p {
+  font-size: 2rem;
+  color: var(--paraColor);
+}
+
+/* habits */
+.habits {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.habit-card img {
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+
+.habit-card h4 {
+  font-size: 2.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--fontColor);
+}
+
+.habit-card p {
+  font-size: 1.8rem;
+  color: var(--paraColor);
+}
+
+.habit-card {
+  transition: 300ms ease-out;
+  padding: 20px 10px;
+}
+.habit-card:hover {
+  transform: translateY(-10px);
+  background-color: var(--floatingColor);
+  border-radius: 16px;
 }
 /* responsible for mobile */
 @media screen and (max-width: 576px) {
@@ -183,6 +252,9 @@ nav {
   /* header section */
   header {
     padding: 50px 20px;
+  }
+  main {
+    padding: 20px 20px;
   }
   .nav-menu {
     display: none;
@@ -211,5 +283,23 @@ nav {
     padding: 2rem 2.5rem;
     top: 60px;
     right: 5px;
+  }
+
+  /* habit section */
+  .habits-container {
+    width: calc(100% - 20px);
+  }
+  .habits {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .habits-title {
+    width: calc(100% - 20px);
+  }
+  .habit-card p {
+    max-width: 60%;
+    margin: 0 auto;
+  }
+  .habits-container {
+    margin-top: 0;
   }
 }
