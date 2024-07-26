@@ -402,7 +402,7 @@ input[type="number"]::-webkit-outer-spin-button {
 @media screen and (max-width: 576px) {
   /* def rem size */
   html {
-    font-size: 8px;
+    font-size: 9px;
   }
   /* header section */
   header {
@@ -482,7 +482,13 @@ input[type="number"]::-webkit-outer-spin-button {
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
     padding: 20px;
-    place-items: start;
+    /* place-items: start; */
+  }
+  .bmi-title {
+    text-align: left;
+    width: calc(100% - 20px);
+    padding: 0;
+    margin: 0 0 35px 20px;
   }
   .calculation {
     width: calc(100% - 20px);
