@@ -69,58 +69,134 @@
       </section>
     </header>
     <main>
-      <!-- habits section -->
-      <section class="habits-container">
-        <div class="habits-title">
-          <h1>Change Your Habits</h1>
+      <div class="content-container">
+        <!-- habits section -->
+        <section class="habits-container">
+          <div class="habits-title">
+            <h1>Change Your Habits</h1>
+            <p>
+              We believe fitness should be accessible to everyone, everywhere,
+              regardless of income or access to a gym.
+            </p>
+          </div>
+          <div class="habits">
+            <div class="habit-card">
+              <img src="images/habits-imgs/habit1.png" alt="Movement" />
+              <h4>Movement</h4>
+              <p>We believe fitness should be accessible to everyone</p>
+            </div>
+            <div class="habit-card">
+              <img src="images/habits-imgs/habit2.png" alt="time maintaining" />
+              <h4>Time</h4>
+              <p>Its very important to do exercise by maintaining time</p>
+            </div>
+            <div class="habit-card">
+              <img
+                src="images/habits-imgs/habit3.png"
+                alt="a man practicing some exercise"
+              />
+              <h4>Practice</h4>
+              <p>Practice more and more to keep your body feet</p>
+            </div>
+            <div class="habit-card">
+              <img src="images/habits-imgs/habit4.png" alt="weight loss" />
+              <h4>Weight Loss</h4>
+              <p>You will lose your overweight by doing exercise regularly</p>
+            </div>
+          </div>
+        </section>
+        <!-- run extra miles section -->
+        <section class="run-extra-miles">
+          <div class="run-extra-miles-container">
+            <div class="run-extra-miles-details">
+              <h1>Run an Extra <br />Mile Easily</h1>
+              <p>
+                We believe fitness should be accessible to everyone, everywhere,
+                regardless of income or access to a gym. With hundreds of
+                professional workouts.
+              </p>
+              <div>
+                <button class="button">Join Now</button>
+              </div>
+            </div>
+            <!-- image -->
+            <div class="run-extra-miles-image">
+              <img src="images/run.jpg" alt="a man is running" />
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- bmi calculator section -->
+      <section class="bmi-container">
+        <div class="bmi-title">
+          <h1>BMI Calculator</h1>
           <p>
             We believe fitness should be accessible to everyone, everywhere,
             regardless of income or access to a gym.
           </p>
         </div>
-        <div class="habits">
-          <div class="habit-card">
-            <img src="images/habits-imgs/habit1.png" alt="Movement" />
-            <h4>Movement</h4>
-            <p>We believe fitness should be accessible to everyone</p>
+        <div class="bmi-calculator-container">
+          <div class="calculator">
+            <h1>BMI Calculator Chart</h1>
+            <!-- bmi table -->
+            <table class="bmi-table">
+              <thead class="t-head">
+                <tr>
+                  <td>BMI</td>
+                  <td>Weight Status</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Below 18.5</td>
+                  <td>Underweight</td>
+                </tr>
+                <tr>
+                  <td>18.5 - 24.9</td>
+                  <td>Healthy</td>
+                </tr>
+                <tr>
+                  <td>25.0 - 29.9</td>
+                  <td>Overweight</td>
+                </tr>
+                <tr>
+                  <td>30.0 - and Above</td>
+                  <td>Obese</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-          <div class="habit-card">
-            <img src="images/habits-imgs/habit2.png" alt="time maintaining" />
-            <h4>Time</h4>
-            <p>Its very important to do exercise by maintaining time</p>
-          </div>
-          <div class="habit-card">
-            <img
-              src="images/habits-imgs/habit3.png"
-              alt="a man practicing some exercise"
-            />
-            <h4>Practice</h4>
-            <p>Practice more and more to keep your body feet</p>
-          </div>
-          <div class="habit-card">
-            <img src="images/habits-imgs/habit4.png" alt="weight loss" />
-            <h4>Weight Loss</h4>
-            <p>You will lose your overweight by doing exercise regularly</p>
-          </div>
-        </div>
-      </section>
-      <!-- run extra miles section -->
-      <section class="run-extra-miles">
-        <div class="run-extra-miles-container">
-          <div class="run-extra-miles-details">
-            <h1>Run an Extra <br />Mile Easily</h1>
+          <!-- bmi calculation -->
+          <div class="calculation">
+            <h1>Calculate your BMI</h1>
             <p>
               We believe fitness should be accessible to everyone, everywhere,
-              regardless of income or access to a gym. With hundreds of
-              professional workouts.
+              regardless of income or access to a gym.
             </p>
-            <div>
-              <button class="button">Join Now</button>
-            </div>
-          </div>
-          <!-- image -->
-          <div class="run-extra-miles-image">
-            <img src="images/run.jpg" alt="a man is running" />
+            <form action="#">
+              <div class="height-weight-calculation">
+                <input type="number" placeholder="Height/cm" /><input
+                  type="number"
+                  placeholder="Weight/kg"
+                />
+              </div>
+              <div class="age-sex">
+                <input type="number" placeholder="Age" />
+                <select name="gender" id="gender">
+                  <option value="sex">Sex</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="custom">Custom</option>
+                </select>
+              </div>
+              <div class="activity">
+                <select name="" id="">
+                  <option value="default">Select an activity factor</option>
+                </select>
+                <div class="button-act">Calculate</div>
+              </div>
+            </form>
           </div>
         </div>
       </section>
