@@ -398,6 +398,74 @@ input[type="number"]::-webkit-outer-spin-button {
   border-radius: 50px;
   cursor: pointer;
 }
+
+/* team members section */
+.meet-our-team-container {
+}
+.meet-our-team-title {
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+}
+.meet-our-team-title h1 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  font-weight: 800;
+  color: var(--fontColor);
+}
+.meet-our-team-title p {
+  font-size: 2rem;
+  color: var(--paraColor);
+}
+.team-members {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  background-color: var(--floatingColor);
+  border-radius: 18px;
+  margin-top: 75px;
+}
+.trainer {
+  position: relative;
+}
+.trainer-name {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 16px 19px;
+  z-index: 2;
+}
+.trainer-name h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--fontColor);
+}
+.trainer-name p {
+  font-size: 1.5rem;
+  color: var(--paraColor);
+}
+.team-members img {
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  object-fit: cover;
+  /* object-position: 10% 50%; */
+  position: relative;
+}
+.trainer::after {
+  background: rgb(7, 7, 7);
+  content: "";
+  height: 100%;
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+}
 /* responsible for mobile */
 @media screen and (max-width: 576px) {
   /* def rem size */
@@ -505,5 +573,31 @@ input[type="number"]::-webkit-outer-spin-button {
   .calculation input,
   select {
     width: 100%;
+  }
+  /* team section */
+  .meet-our-team-container {
+    margin-top: 50px;
+  }
+  .meet-our-team-title {
+    width: calc(100% - 20px);
+  }
+  .team-members {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .trainer2 {
+    order: 1;
+  }
+  .trainer5 {
+    order: 2;
+  }
+  .trainer3 {
+    order: 3;
+  }
+  .trainer6 {
+    order: 4;
+  }
+  .trainer1,
+  .trainer4 {
+    display: none;
   }
 }
