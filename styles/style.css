@@ -13,6 +13,7 @@ html {
 /* variables */
 :root {
   --primaryColor: #e6533c;
+  --lineColor: rgba(255, 255, 255, 0.1);
   --paraColor: rgba(255, 255, 255, 0.5);
   --floatingColor: rgba(48, 48, 48, 0.54);
   --defFont: "Inter", sans-serif;
@@ -70,8 +71,8 @@ nav {
   display: none;
 }
 
-.logo h1 {
-  font-size: 3.5rem;
+.logo i {
+  font-size: 4rem;
   color: var(--primaryColor);
 }
 .nav-menu ul {
@@ -466,11 +467,58 @@ input[type="number"]::-webkit-outer-spin-button {
   left: 0;
   opacity: 0.2;
 }
+/* footer section */
+footer {
+  background-color: var(--floatingColor);
+  margin-top: 85px;
+}
+.logo-des i {
+  font-size: 7rem;
+  color: var(--primaryColor);
+  padding: 0;
+  margin: 0;
+  font-weight: 900;
+}
+.logo-des p {
+  font-size: 1.8rem;
+  color: var(--paraColor);
+  margin-top: 20px;
+}
+.footer-container {
+  display: grid;
+  grid-template-columns: 40% repeat(2, 1fr);
+  gap: 50px;
+  padding: 50px 0;
+}
+.footer-container h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.footer-container a {
+  display: block;
+  text-decoration: none;
+  color: var(--paraColor);
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+.footer-container a:hover {
+  color: var(--primaryColor);
+}
+hr.line {
+  border: 1px solid var(--lineColor);
+}
+.copyright {
+  font-size: 2rem;
+  padding: 30px 0;
+  color: var(--paraColor);
+  text-align: center;
+}
 /* responsible for mobile */
 @media screen and (max-width: 576px) {
   /* def rem size */
   html {
-    font-size: 9px;
+    font-size: 8.5px;
   }
   /* header section */
   header {
@@ -491,11 +539,18 @@ input[type="number"]::-webkit-outer-spin-button {
     flex-direction: column;
     gap: 5rem;
   }
+  .hero h1 {
+    font-size: 7rem;
+  }
   .hero-details {
     width: calc(100% - 20px);
   }
   .hero-img {
     width: calc(100% - 20px);
+  }
+  .tutorial h1,
+  .workout h1 {
+    font-size: 2.4rem;
   }
   .tutorial {
     padding: 2rem 2.5rem;
@@ -599,5 +654,9 @@ input[type="number"]::-webkit-outer-spin-button {
   .trainer1,
   .trainer4 {
     display: none;
+  }
+  /* footer section */
+  .footer-container {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
