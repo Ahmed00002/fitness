@@ -514,6 +514,176 @@ hr.line {
   color: var(--paraColor);
   text-align: center;
 }
+/* special section */
+.memberships {
+  display: flex;
+  gap: 10px;
+  margin: 50px 0;
+}
+
+.img1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../images/exercise1.jpg);
+  background-position: 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.img2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../images/exercise2.png);
+  background-position: 70%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.img3 {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../images/exercise6.jpg);
+  background-position: 40%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.img4 {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../images/exercise5.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.img1,
+.img2,
+.img3,
+.img4 {
+  height: 300px;
+  width: 33%;
+  transition: 500ms ease-in-out;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+.img1:hover,
+.img2:hover,
+.img3:hover,
+.img4:hover {
+  width: 70%;
+}
+
+.img-title {
+  /* padding: 5px; */
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(214, 214, 214, 0.524);
+  border: 1px solid rgba(214, 214, 214, 0.237);
+  padding: 20px 25px;
+  color: white;
+  font-size: 2rem;
+  font-weight: 900;
+  transition: 500ms ease-in-out;
+  border-radius: 20px;
+  text-align: center;
+  display: grid;
+  place-content: center;
+}
+.img-title h1 {
+  font-size: 2rem;
+  color: rgb(6, 255, 147);
+}
+.img-title h3 {
+  font-size: 1.8rem;
+  margin-top: 20px;
+  font-weight: 400;
+}
+.img-title button {
+  font-size: 1.2rem;
+  font-weight: 400;
+  display: block;
+  padding: 5px;
+  background-color: var(--primaryColor);
+  border: none;
+  border-radius: 8px;
+  margin-top: 20px;
+  color: var(--fontColor);
+}
+
+.exercise-details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: 400ms ease-in-out;
+  transform: translateY(100%);
+  background-color: transparent;
+  backdrop-filter: blur(2px);
+  padding: 10px;
+}
+.exercise-details p {
+  font-size: 1.8rem;
+  color: var(--fontColor);
+  margin-top: 40px;
+}
+.img1:hover .exercise-details,
+.img2:hover .exercise-details,
+.img3:hover .exercise-details,
+.img4:hover .exercise-details {
+  display: block;
+  transform: translateY(0);
+}
+
+/* facilities Design */
+.exercise-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.subscription-details h2 {
+  font-size: 2.1rem;
+  color: rgb(6, 255, 147);
+  font-weight: 800;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  width: auto;
+}
+.subscription-details {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.facilities {
+  font-size: 2rem;
+  text-align: left;
+  list-style: none;
+  display: grid;
+  align-items: center;
+}
+.facilities li {
+  margin-top: 5px;
+  color: var(--fontColor);
+}
+.facilities i {
+  color: rgb(6, 255, 147);
+  margin-right: 10px;
+}
+.subscription-button {
+  text-align: center;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+.subscription-button button {
+  padding: 8px 40px;
+  background-color: black;
+  color: var(--fontColor);
+  font-size: 1.8rem;
+  font-weight: 400;
+  border-radius: 50px;
+  border: none;
+}
 /* responsible for mobile */
 @media screen and (max-width: 576px) {
   /* def rem size */
@@ -655,6 +825,25 @@ hr.line {
   .trainer4 {
     display: none;
   }
+  /* special section */
+  .memberships {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .img1,
+  .img2,
+  .img3,
+  .img4 {
+    width: calc(100% - 20px);
+  }
+  .img1:hover,
+  .img2:hover,
+  .img3:hover,
+  .img4:hover {
+    width: calc(100% - 20px);
+  }
+
   /* footer section */
   .footer-container {
     grid-template-columns: repeat(1, 1fr);
