@@ -55,10 +55,12 @@ body {
   margin: 0 auto;
 }
 header {
+  background: linear-gradient(180deg, rgb(29, 29, 29), rgba(119, 119, 119, 0));
+}
+.header-container {
   max-width: 1440px;
   padding: 50px 100px 0 100px;
   margin: 0 auto;
-  background: linear-gradient(180deg, rgb(29, 29, 29), rgba(119, 119, 119, 0));
 }
 nav {
   display: flex;
@@ -692,7 +694,7 @@ hr.line {
     font-size: 8.5px;
   }
   /* header section */
-  header {
+  .header-container {
     padding: 50px 20px;
   }
   .content-container {
